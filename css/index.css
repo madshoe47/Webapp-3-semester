@@ -53,7 +53,7 @@ position: relative;;
 }
 .bigbutton {
   border: none;
-  width: 40%;
+  max-width: 40%;
   background-color: #20639B;
   color: white;
   padding: 15px 32px;
