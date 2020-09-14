@@ -6,8 +6,7 @@ function hideAllPages() {
   for (let page of pages) {
     page.style.display = "none";
   }
-  menuknap()
-
+  menuKnapGem()
 }
 
 // show page or tab
@@ -24,17 +23,30 @@ function navigateTo(pageId) {
 // set default page or given page by the hash url
 // function is called 'onhashchange'
 function pageChange() {
-  let page = "index";
+  let page = "home";
   if (location.hash) {
     page = location.hash.slice(1);
   }
   showPage(page);
 }
 
+
+
+
 // navknap
-function menuknap() {
+function menuknapvis() {
   let nav = document.querySelector('nav');
-  nav.classList.toggle("show")
+  nav.classList.add("show")
+  nav.classList.add("swing-in-bottom-bck")
 }
+
+function menuKnapGem() {
+  let nav = document.querySelector('nav');
+  nav.classList.remove("show")
+
+
+}
+
+
 
 pageChange(); // called by default when the app is loaded for the first time
