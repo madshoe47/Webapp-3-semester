@@ -37,6 +37,60 @@ h1 {
 
 
 
+/*nav*/
+.menuknap{
+position: absolute;
+z-index: 9999999999;
+bottom: 0;
+right:0
+
+}
+
+.menuknap img{
+width: auto;
+height: 100px;
+
+}
+
+nav{
+background-color:white;
+position: absolute;
+z-index: 99999999999;
+bottom: 0;
+width: 100%;
+height: 24%;
+box-shadow: 0px -4px 16px 0px rgba(0,0,0,0.75);
+display:none;
+
+}
+.show{
+  display: block;
+}
+
+.menu_margin{
+margin: 1em 0 0 0;
+}
+
+.close{
+  padding: 0 1em 0 0
+}
+
+
+.closediv{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;  
+}
+.noback_border{
+  background-color: transparent;
+  border: none;
+
+}
+
+
+
+
+
 /*frontpage styling*/
 .frontimg{
   width: 100%;
@@ -45,10 +99,17 @@ h1 {
     z-index: -999999;
 
 
-}
+  }
+
+
+  .divho{
+    height: 100vh;
+  }
 
 .front{
-position: relative;;
+position: relative;
+background-color: transparent;
+border: none;
 
 }
 .bigbutton {

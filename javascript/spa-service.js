@@ -29,4 +29,10 @@ function pageChange() {
   showPage(page);
 }
 
+// navknap
+function menuknap() {
+  let nav = document.querySelector('nav');
+  nav.classList.toggle("show")
+}
+
 pageChange(); // called by default when the app is loaded for the first time
