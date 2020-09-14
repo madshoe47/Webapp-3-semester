@@ -6,6 +6,8 @@ function hideAllPages() {
   for (let page of pages) {
     page.style.display = "none";
   }
+  menuknap()
+
 }
 
 // show page or tab

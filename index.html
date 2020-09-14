@@ -11,13 +11,13 @@
     <title></title>
 </head>
 
-<body onhashchange="pagechange()">
+<body onhashchange="pageChange()">
     <header>
         <img src="img/logo.png" alt="logo" class="logo">
 
     </header>
     <button onClick="menuknap()" class="menuknap noback_border"><img src="img/menu.svg" alt=""></button>
-    <nav>
+    <nav class="show">
         <section class="closediv">
             <button onClick="menuknap()" class="noback_border"><img src="img/close.svg" class="menu_margin close"
                     alt=""></button>
@@ -33,7 +33,7 @@
     </nav>
     <!--pages-->
     <!-- front page-->
-    <section id="index" class="page front">
+    <section id="home" class="page front">
         <div class="divho"><img src="img/ben.jpg" alt="" class="frontimg"></div>
         <div class="frontbuttons"><button class="bigbutton" onClick="klikfunktion()">
                 Full Programs
