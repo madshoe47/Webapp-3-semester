@@ -113,11 +113,25 @@ color:#20639B;
 font-weight: 500;
 
 }
-
 .overskrift {
   width: 80%;
   margin: auto;
 }
+
+.tilbagepil{
+  position: absolute;
+  z-index: 9999999999;
+  bottom: 0;
+  left:0;
+  background: none;
+  border:transparent;
+  }
+  
+  .tilbagepil img{
+  width: auto;
+  height: 100px;
+  
+  }
 
 
 /* ----------------------------------------------
@@ -222,8 +236,6 @@ font-weight: 500;
 
 
   }
-
-
   .divho{
     height: 100vh;
   }
