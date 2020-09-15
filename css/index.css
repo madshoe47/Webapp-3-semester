@@ -13,9 +13,12 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  color:#20639B;
+  padding-top: 5.5em;
+
 }
 
 /*page styling*/
@@ -34,8 +37,6 @@ h1 {
 
     left: 0;
 }
-
-
 
 /*nav*/
 .menuknap{
@@ -94,6 +95,16 @@ margin: 1em 0 0 0;
 .swing-out-bottom-bck {
 	-webkit-animation: swing-out-bottom-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
 	        animation: swing-out-bottom-bck 0.45s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+}
+
+/* Program page with different bodyparts */
+.bodyparts {
+display: flex;
+flex-wrap: wrap;
+}
+.bodyparts a {
+
+text-decoration:none;
 }
 
 /* ----------------------------------------------
