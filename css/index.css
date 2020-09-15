@@ -16,8 +16,6 @@ h1 {
   font-size: 1.2em;
   font-weight: 500;
   color:#20639B;
-  padding-top: 5.5em;
-
 }
 
 /*page styling*/
@@ -26,6 +24,10 @@ h1 {
   /*min heigh is screen heigh minus height of tab and top bar */
   animation: fadeIn 0.4s;
   /* padding equals height of tabbar and topbar */
+}
+
+.pageMedPadding{
+  padding-bottom: 110px;
 }
 
 .logo{
@@ -38,7 +40,7 @@ h1 {
 
 /*nav*/
 .menuknap{
-position: absolute;
+position: fixed;
 z-index: 9999999999;
 bottom: 0;
 right:0
@@ -54,7 +56,7 @@ height: 100px;
 nav{
 background-color:white;
 position: absolute;
-z-index: 99999999999;
+z-index: 99999999999999;
 bottom: 0;
 width: 100%;
 height: 24%;
@@ -115,12 +117,14 @@ font-weight: 500;
 }
 .overskrift {
   width: 80%;
-  margin: auto;
+  margin:auto;
+  padding-top: 5em;
+
 }
 
 .tilbagepil{
-  position: absolute;
-  z-index: 9999999999;
+  position: fixed;
+  z-index: 99999999;
   bottom: 0;
   left:0;
   background: none;
@@ -261,7 +265,7 @@ border: none;
   box-shadow: inset 0px 0px 10px -1px rgba(0, 0, 0, 0.51);
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.51);
   margin: 0 0.5em;
-  height: 70px;;
+  height: 70px;
 
 }
 
