@@ -11,7 +11,7 @@ const chest = _db.collection("Chest");
 const yoga = _db.collection("Yoga");
 
 
-
+let programTitle = ""
 
 // ========== READ ==========
 // watch the database ref for changes
@@ -111,13 +111,10 @@ function appendPrograms(programs, part) {
 
 
 
-let tit = function reply(clicked_title) {
-    let pro_tit = clicked_title
-
-
-    console.log(pro_tit)
-    return pro_tit
-
+function reply(clicked_title) {
+    programTitle = clicked_title
+    console.log(programTitle)
 }
 
 
+console.log(programTitle)
