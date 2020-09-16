@@ -68,6 +68,11 @@ let current = window.location.hash.replace(/#/g, '')
 let title = getPrograms(current)
 
 
+function goToPart(name) {
+    current = name;
+    getPrograms(name)
+    navigateTo(name)
+}
 
 
 
