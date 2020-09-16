@@ -15,7 +15,7 @@ const yoga = _db.collection("Yoga");
 
 // ========== READ ==========
 // watch the database ref for changes
-function getPrograms(part) {
+function loadPrograms(part) {
     part.onSnapshot(function (snapshotData) {
         let programmer = [];
         snapshotData.forEach(function (doc) {
@@ -29,19 +29,36 @@ function getPrograms(part) {
     });
 }
 
+function getPrograms(part) {
+    if (part == "abs") {
+        loadPrograms(abs)
+    } else if (part == "legs") {
+        loadPrograms(legs)
+    } else if (part == "Arms & Shoulder") {
+        loadPrograms(Arms & Shoulder)
+    } else if (part == "back") {
+        loadPrograms(back)
+    } else if (part == "booty") {
+        loadPrograms(booty)
+    } else if (part == "cardio") {
+        loadPrograms(cardio)
+    } else if (part == "chest") {
+        loadPrograms(chest)
+    } else if (part == "yoga") {
+        loadPrograms(yoga)
+    }
+};
 
-
-console.log(current)
-
-getPrograms(current)
 
 let current = window.location.hash.replace(/#/g, '')
+getPrograms(current)
+
 
 function appendPrograms(programs, part) {
     let HTMLtemplate = `"<h1 class="overskrift">${part}</h1>"`;
     for (const program of programs) {
         console.log(program)
-        HTMLtemplate += /*html*/`
+        HTMLtemplate += /*html*/ `
          
         <article class="program">
             <div class="img_t_l">
@@ -64,7 +81,3 @@ function appendPrograms(programs, part) {
     document.querySelector("#abs").innerHTML = HTMLtemplate
 
 }
-
-
-
-
