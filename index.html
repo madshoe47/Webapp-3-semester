@@ -93,14 +93,14 @@
 
 
     <section id="filter" class="page">
-        <button class="noback_border nulstil
+        <button onclick="nulstil()" class="noback_border nulstil
             ">
             <h1>Nulstil</h1>
         </button>
         <div class="filterbox">
             <h1>Duration</h1>
             <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <input type="range" min="5" max="60" value="32.5" class="slider" id="minSlider">
             </div>
             <div class="tidslide">
                 <p class="marginnul">5 min</p>
@@ -113,11 +113,11 @@
         <div class="filterbox">
             <h1>Workout location:</h1>
             <div class="flex_filt">
-                <button class="bigbutton filterknap">
-                    <div class="loc">Home <img src="img/home_loc.svg" alt=""></div>
+                <button onclick="locaKnap('Home')" class="bigbutton filterknap trykket">
+                    <div class=" loc">Home <img src="img/home_loc.svg" alt=""></div>
                 </button>
 
-                <button class="bigbutton filterknap">
+                <button onclick="locaKnap('Fitness')" class="bigbutton filterknap trykket">
                     <div class="loc">Fitness <img src="img/fit_loc.svg" alt="">
                     </div>
                 </button>
@@ -130,14 +130,15 @@
         <div class="filterbox">
             <h1>Purpose:</h1>
             <div class="flex_filt">
-                <button class="bigbutton filterknap">Build muscle</button>
-                <button class="bigbutton filterknap">Burn fat</button>
-                <button class="bigbutton filterknap">Casual</button>
+                <button onclick="purposeKnap('Build Muscle')" class="bigbutton filterknap trykket">Build muscle</button>
+                <button onclick="purposeKnap('Burn fat')" value="" class="bigbutton filterknap trykket">Burn
+                    fat</button>
+                <button onclick="purposeKnap('Casual')" class="bigbutton filterknap trykket">Casual</button>
             </div>
 
         </div>
 
-        <button class="bigbutton noback_border">Update
+        <button onclick="updateFilter()" class="bigbutton noback_border">Update
         </button>
     </section>
 
@@ -145,26 +146,28 @@
 
     <section id="abs" class="page">
 
-        <button onClick="location.href='#filter'" class="noback_border filter"><img src="img/filter.svg"
-                alt=""></button>
+        <button onClick="filterside(abs)" class="noback_border filter"><img src="img/filter.svg" alt=""></button>
     </section>
     <!---->
 
     <section id="legs" class="page">
-        <button onClick="location.href='#'" class="noback_border filter"><img src="img/filter.svg" alt=""></button>
+        <button onClick="location.href='#filter'"" class=" noback_border filter"><img src="img/filter.svg"
+                alt=""></button>
     </section>
 
     <!---->
 
     <section id="as" class="page">
-        <button onClick="location.href='#'" class="noback_border filter"><img src="img/filter.svg" alt=""></button>
+        <button onClick="location.href='#filter'"" class=" noback_border filter"><img src="img/filter.svg"
+                alt=""></button>
     </section>
 
 
     <!---->
 
     <section id="back" class="page">
-        <button onClick="location.href='#'" class="noback_border filter"><img src="img/filter.svg" alt=""></button>
+        <button onClick="location.href='#filter'"" class=" noback_border filter"><img src="img/filter.svg"
+                alt=""></button>
     </section>
 
 
@@ -214,6 +217,7 @@
 
     <script src="javascript/spa-service.js"></script>
     <script src="javascript/main.js"></script>
+    <script src="javascript/filter.js"></script>
 </body>
 
 </html>

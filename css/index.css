@@ -412,3 +412,9 @@ justify-content: space-around;
 .nulstil{
   width: 100%;
 }
+
+
+.trykket:focus{
+  background-color: white;
+  color: #20639B;
+}

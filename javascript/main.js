@@ -1,14 +1,6 @@
 "use strict"
 
-const _db = firebase.firestore();
-const abs = _db.collection("Abs");
-const legs = _db.collection("Legs");
-const as = _db.collection("Arms & Shoulder");
-const back = _db.collection("Back");
-const booty = _db.collection("Booty");
-const cardio = _db.collection("Cardio");
-const chest = _db.collection("Chest");
-const yoga = _db.collection("Yoga");
+
 
 
 let programTitle = ""
@@ -82,7 +74,7 @@ function appendPrograms(programs, part) {
         console.log(program)
         HTMLtemplate += /*html*/ `
 
-       <a href="#ovleser" class="pro">
+       <a onclick="getExer('${programTitle}')" href="#ovleser" class="pro">
 
         <button class="noback_border" onClick="reply('${program.title}')"">
              
@@ -116,10 +108,62 @@ function appendPrograms(programs, part) {
 
 
 
+
 function reply(clicked_title) {
     programTitle = clicked_title
     console.log(programTitle)
 }
 
 
+
 console.log(programTitle)
+
+//øvelserne
+
+function appendExercises(program) {
+    let HTMLtemplate = `<h1 class="overskrift">${program}</h1>`;
+    for (const ovelse of programs) {
+        console.log(program)
+        HTMLtemplate += /*html*/ `
+
+       <a href="#ovleser" class="pro">
+
+        <article class="exercise">
+            <div class="exer">
+                <div class="exerbrep">
+                    <img class="proIMG" src="${ovelse.img}" alt="">
+                    <div class="headrep">
+                        <h1 class="marginnul">${ovelse.description}</h1>
+                        <div class="reps">
+                            <h4 class="marginnul">${ovelse.rep} reps</h4>
+                            <img src="img/close.svg" alt="">
+                            <h4 class="marginnul">${ovelse.sets} sets</h4>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div><img src="img/skraldespand.svg" alt="">
+                    <p class="marginnul">Delete</p>
+                </div>
+
+            </div>
+            </div>
+
+
+            <hr class="marginnul">
+        </article>
+    </button>
+ </a>
+        
+        `
+    }
+    document.querySelector('#ovelser').innerHTML += HTMLtemplate
+
+
+}
+
+
+

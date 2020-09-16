@@ -14,3 +14,12 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+const _db = firebase.firestore();
+const abs = _db.collection("Abs");
+const legs = _db.collection("Legs");
+const as = _db.collection("Arms & Shoulder");
+const back = _db.collection("Back");
+const booty = _db.collection("Booty");
+const cardio = _db.collection("Cardio");
+const chest = _db.collection("Chest");
+const yoga = _db.collection("Yoga");
