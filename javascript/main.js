@@ -67,7 +67,8 @@ function getPrograms(part) {
 let current = window.location.hash.replace(/#/g, '')
 let title = getPrograms(current)
 
-console.log(title)
+
+
 
 
 function appendPrograms(programs, part) {
@@ -76,8 +77,11 @@ function appendPrograms(programs, part) {
         console.log(program)
         HTMLtemplate += /*html*/ `
 
-        <a href="#ovleser" class="pro">
-<article class="program">
+       <a href="#ovleser" class="pro">
+
+        <button class="noback_border" onClick="reply('${program.title}')"">
+             
+            <article class="program">
             <div class="img_t_l">
                 <img class="proIMG" src="${program.img}" alt="">
                 <p class="time"><img src="img/Icon ionic-md-stopwatch.svg" alt="Stopwatch icon">: ${program.time} min</p>
@@ -94,7 +98,10 @@ function appendPrograms(programs, part) {
             </div>
         </article>
     
-    </a>
+   
+            
+    </button>
+ </a>
         
         `
     }
@@ -102,4 +109,15 @@ function appendPrograms(programs, part) {
 
 }
 
-console.log(program.title)
+
+
+let tit = function reply(clicked_title) {
+    let pro_tit = clicked_title
+
+
+    console.log(pro_tit)
+    return pro_tit
+
+}
+
+
