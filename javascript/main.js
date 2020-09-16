@@ -50,10 +50,6 @@ function getPrograms(part) {
 };
 
 
-let current = window.location.hash.replace(/#/g, '')
-getPrograms(current)
-
-
 function appendPrograms(programs, part) {
     let HTMLtemplate = `"<h1 class="overskrift">${part}</h1>"`;
     for (const program of programs) {
