@@ -59,7 +59,7 @@ function appendPrograms(programs, part) {
         <article class="program">
             <div class="img_t_l">
                 <img class="proIMG" src="${program.img}" alt="">
-                <p class="time"><img src="img/Icon ionic-md-stopwatch.svg" alt="Stopwatch icon">:${program.time}</p>
+                <p class="time"><img src="img/Icon ionic-md-stopwatch.svg" alt="Stopwatch icon">:${program.time} min</p>
                 <p class="location"><img src="img/Icon material-location-on.svg" alt="Location icon">:${program.location}</p>
             </div>
             <div>
