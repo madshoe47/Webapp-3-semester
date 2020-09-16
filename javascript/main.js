@@ -24,43 +24,64 @@ function loadPrograms(part) {
             programmer.push(program);
         });
         console.log(programmer)
-        appendPrograms(programmer, part)
+        appendPrograms(programmer, current)
+
+
 
     });
+
 }
 
 function getPrograms(part) {
+    var title = ""
+
     if (part == "abs") {
         loadPrograms(abs)
+        title = "Abs"
     } else if (part == "legs") {
         loadPrograms(legs)
-    } else if (part == "Arms & Shoulder") {
-        loadPrograms(Arms & Shoulder)
+        title = "Legs"
+    } else if (part == "as") {
+        loadPrograms(as)
+        title = "Arms & Shoulder"
     } else if (part == "back") {
         loadPrograms(back)
+        title = "Back"
     } else if (part == "booty") {
         loadPrograms(booty)
+        title = "Booty"
     } else if (part == "cardio") {
         loadPrograms(cardio)
+        title = "Cardio"
     } else if (part == "chest") {
         loadPrograms(chest)
+        title = "Chest"
     } else if (part == "yoga") {
         loadPrograms(yoga)
+        title = "Yoga"
     }
+    return title
+
+
 };
+let current = window.location.hash.replace(/#/g, '')
+let title = getPrograms(current)
+
+console.log(title)
 
 
 function appendPrograms(programs, part) {
-    let HTMLtemplate = `"<h1 class="overskrift">${part}</h1>"`;
+    let HTMLtemplate = `<h1 class="overskrift">${title}</h1>`;
     for (const program of programs) {
         console.log(program)
         HTMLtemplate += /*html*/ `
-         
-        <article class="program">
+
+        <a href="#ovleser" class="pro">
+<article class="program">
             <div class="img_t_l">
                 <img class="proIMG" src="${program.img}" alt="">
-                <p class="time"><img src="img/Icon ionic-md-stopwatch.svg" alt="Stopwatch icon">:${program.time} min</p>
-                <p class="location"><img src="img/Icon material-location-on.svg" alt="Location icon">:${program.location}</p>
+                <p class="time"><img src="img/Icon ionic-md-stopwatch.svg" alt="Stopwatch icon">: ${program.time} min</p>
+                <p class="location"><img src="img/Icon material-location-on.svg" alt="Location icon">: ${program.location}</p>
             </div>
             <div>
                 <h1 class="title">${program.title}</h1>
@@ -72,8 +93,13 @@ function appendPrograms(programs, part) {
                 <p class="description">${program.description}</p>
             </div>
         </article>
+    
+    </a>
+        
         `
     }
-    document.querySelector("#abs").innerHTML = HTMLtemplate
+    document.querySelector(`#${part}`).innerHTML += HTMLtemplate
 
 }
+
+console.log(program.title)

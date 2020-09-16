@@ -28,6 +28,7 @@ function pageChange() {
     page = location.hash.slice(1);
   }
   showPage(page);
+
 }
 
 

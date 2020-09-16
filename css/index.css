@@ -5,7 +5,7 @@ html {
   height: 100%;
   text-align: center;
   width: 100%;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 body {
@@ -16,6 +16,10 @@ h1 {
   font-size: 1.2em;
   font-weight: 500;
   color:#20639B;
+}
+
+.marginnul{
+  margin: 0;
 }
 
 /*page styling*/
@@ -300,7 +304,7 @@ border: none;
 
 }
  .location, .time{
-  width: 80%;
+  width: 90%;
   margin: auto;
   text-align: center;
   font-weight: 700;
@@ -330,7 +334,13 @@ border: none;
 
 .proIMG{
   width: 100px;
+  height: 100px;
+  object-fit:cover; 
   border-radius: 50%;
   border: 1px solid rgba(0,0,0,0.50);;
   box-shadow:0px 0px 5px 0px rgba(0,0,0,0.50); ;
+}
+
+.pro{
+  text-decoration: none;
 }
