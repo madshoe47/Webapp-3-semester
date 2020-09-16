@@ -134,7 +134,12 @@ font-weight: 500;
   .tilbagepil img{
   width: auto;
   height: 100px;
-  
+  }
+
+  .filter {
+    position: absolute;
+    right: 0;
+    padding: 3%;
   }
 
 
@@ -226,9 +231,6 @@ font-weight: 500;
     opacity: 1;
   }
 }
-
-
-
 
 
 /*frontpage styling*/
