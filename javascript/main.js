@@ -132,6 +132,7 @@ function loadExer(program) {
 
 }
 
+//Mads//
 function getExer(program) {
     var titleProgram = ""
 
@@ -168,6 +169,7 @@ function getExer(program) {
 };
 let recent = window.location.hash.replace(/#/g, '')
 let titleProgram = getExer(recent)
+console.log()
 
 
 // Jonathan //
