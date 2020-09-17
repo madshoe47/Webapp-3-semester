@@ -223,7 +223,7 @@ function appendExercises(programs) {
     document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu()">Start</button>`
 
 }
-
+// Mads //
 function hideMenu() {
     let menu = document.querySelector('#menuvis');
     let startknap = document.querySelector('.startKnap');
