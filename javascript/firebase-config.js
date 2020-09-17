@@ -23,3 +23,22 @@ const booty = _db.collection("Booty");
 const cardio = _db.collection("Cardio");
 const chest = _db.collection("Chest");
 const yoga = _db.collection("Yoga");
+const pegasus = _db.collection("Yoga").doc("Gemma").collection("Excersises")
+
+
+
+pegasus.onSnapshot(function (snapshotData) {
+    let ovelser = [];
+    snapshotData.forEach(function (doc) {
+        let ovelse = doc.data();
+        ovelse.id = doc.id;
+        ovelser.push(ovelse);
+    });
+    console.log(ovelser)
+
+
+
+
+});
+
+
