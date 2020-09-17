@@ -23,22 +23,20 @@ const booty = _db.collection("Booty");
 const cardio = _db.collection("Cardio");
 const chest = _db.collection("Chest");
 const yoga = _db.collection("Yoga");
-const pegasus = _db.collection("Yoga").doc("Gemma").collection("Excersises")
-
-
-
-pegasus.onSnapshot(function (snapshotData) {
-    let ovelser = [];
-    snapshotData.forEach(function (doc) {
-        let ovelse = doc.data();
-        ovelse.id = doc.id;
-        ovelser.push(ovelse);
-    });
-    console.log(ovelser)
+const pegasus = _db.collection("Abs").doc("Pegasus").collection("Excersises")
+const gemini = _db.collection("Arms & Shoulder").doc("Gemini").collection("Excersises")
+const hercules = _db.collection("Back").doc("Hercules").collection("Excersises")
+const fornax = _db.collection("Booty").doc("Fornax").collection("Excersises")
+const caroli = _db.collection("Cardio").doc("Cor Caroli").collection("Excersises")
+const mensa = _db.collection("Chest").doc("Mensa").collection("Excersises")
+const delphinus = _db.collection("Legs").doc("Delphinus").collection("Excersises")
+const gemma = _db.collection("Yoga").doc("Gemma").collection("Excersises")
 
 
 
 
-});
+
+
+
 
 

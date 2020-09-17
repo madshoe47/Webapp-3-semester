@@ -5,6 +5,7 @@
 
 let programTitle = ""
 
+// Jonathan //
 // ========== READ ==========
 // watch the database ref for changes
 function loadPrograms(part) {
@@ -66,17 +67,15 @@ function goToPart(name) {
     navigateTo(name)
 }
 
-
-
 function appendPrograms(programs, part) {
     let HTMLtemplate = `<h1 class="overskrift">${title}</h1>`;
     for (const program of programs) {
         console.log(program)
         HTMLtemplate += /*html*/ `
 
-       <a onclick="getExer('${programTitle}')" href="#ovleser" class="pro">
+       <a onclick="loadExer('${program.title}')" href="#ovleser" class="pro">
 
-        <button class="noback_border" onClick="reply('${program.title}')"">
+        <button class="noback_border" onClick="reply('${program.title}')">
              
             <article class="program">
             <div class="img_t_l">
@@ -106,9 +105,6 @@ function appendPrograms(programs, part) {
 
 }
 
-
-
-
 function reply(clicked_title) {
     programTitle = clicked_title
     console.log(programTitle)
@@ -120,11 +116,32 @@ console.log(programTitle)
 
 //øvelserne
 
-function appendExercises(program) {
-    let HTMLtemplate = `<h1 class="overskrift">${program}</h1>`;
+// Maja //
+function loadExer(part) {
+    console.log(part)
+    pegasus.onSnapshot(function (snapshotData) {
+        let ovelser = [];
+        snapshotData.forEach(function (doc) {
+            let ovelse = doc.data();
+            ovelse.id = doc.id;
+            ovelser.push(ovelse);
+        });
+        console.log(ovelser)
+        appendExercises(ovelser)
+
+    });
+
+}
+
+
+// Jonathan //
+function appendExercises(programs) {
+    let HTMLtemplate = `<h1 class="overskrift"></h1>`;
     for (const ovelse of programs) {
-        console.log(program)
-        HTMLtemplate += /*html*/ `
+        console.log(ovelse)
+        
+        HTMLtemplate += 
+        /*html*/ `
 
        <a href="#ovleser" class="pro">
 
@@ -157,13 +174,11 @@ function appendExercises(program) {
         </article>
     </button>
  </a>
+ console.log(HTMLtemplate)
         
         `
     }
     document.querySelector('#ovelser').innerHTML += HTMLtemplate
-
-
 }
-
 
 
