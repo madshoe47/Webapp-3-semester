@@ -1,22 +1,88 @@
-"use strict";
+'use strict'
 
-function loadSingleExer(ovelse) {
-    console.log(ovelse)
-    let singleExer = [];
-    ovelse.onSnapshot(function (snapshotData) {
+
+function loadExercises(programchosen) {
+    console.log(programchosen)
+    programchosen.onSnapshot(function (snapshotData) {
+        let exercises = [];
         snapshotData.forEach(function (doc) {
-            let exer = doc.data();
-            exer.id = doc.id;
-            singleExer.push(ovelse);
+            let exercise = doc.data();
+            console.log(exercise)
+            exercise.id = doc.id;
+            exercises.push(exercise);
         });
-        appendSingleExercises(singleExer);
+        appendSingleExercises(exercises);
         navigateTo('exercise');
         console.log(singleExer)
     });
-
 }
 
+//Mads//
+function getExercises(programchosen) {
+    var choosenProgram = ""
 
+    if (programchosen == "Pegasus") {
+        loadExercises(Pegasus)
+        choosenProgram = "Pegasus"
+    } else if (programchosen == "Gemini") {
+        loadExercises(Gemini)
+        choosenProgram = "Gemini"
+    } else if (programchosen == "Hercules") {
+        loadExercises(Hercules)
+        choosenProgram = "Hercules"
+    } else if (programchosen == "back") {
+        loadExercises(back)
+        choosenProgram = "Back"
+    } else if (programchosen == "Fornax") {
+        loadExercises(Fornax)
+        choosenProgram = "Fornax"
+    } else if (programchosen == "Caroli") {
+        loadExercises(Caroli)
+        choosenProgram = "Cor Caroli"
+    } else if (programchosen == "Mensa") {
+        loadExercises(Mensa)
+        choosenProgram = "Mensa"
+    } else if (programchosen == "Delphinus") {
+        loadExercises(Delphinus)
+        choosenProgram = "Delphinus"
+    } else if (programchosen == "Gemma") {
+        loadExercises(Gemma)
+        choosenProgram = "Gemma"
+    }
+    return choosenProgram
+
+};
+let choosen = window.location.hash.replace(/#/g, '')
+let choosenProgram = getExercises(choosen)
+console.log()
+
+
+function appendSingleExercises(exercises) {
+    let HTMLtemplate = "";
+    for (let exercise of exercises) {
+        console.log(exercise.title)
+        console.log(exercise.sets)
+        HTMLtemplate += /*html*/ `
+
+<div class="slide">
+    <div class="caption">
+        <img src = "${exercise.gif}" alt = "">
+        <h1 id = "overskriftexercise" > ${exercise.title} </h1> 
+        <p class = "sets" > ${exercise.sets} </p> 
+    </div>
+</div>
+`
+    }
+    document.querySelector('#gifonexercise').innerHTML = HTMLtemplate;
+    console.log(HTMLtemplate)
+};
+/*console.log(HTMLtemplate);
+document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate */
+
+
+
+
+/*
 let index = 0
 
 
@@ -38,47 +104,4 @@ function motionsHandler() {
     console.log(buttons);
 }
 
-
-
-
-function appendSingleExercises(programs) {
-    let HTMLtemplate = "";
-
-    HTMLtemplate += /*html*/ `
- 
- <section id = "exercise" class = "page">
-     <button onclick = "location.href=''" class = "close-sign"> <img src = "img/closex.svg" alt = ""> </button>
-
-     <div id = "gifonexercise" class = "picture-exercise" >
-        <img src = "${singleExer[i].gif}" alt = "">
-        <h1 id = "overskriftexercise" > ${singleExer[i].title} </h1> 
-        <p class = "sets" > ${singleExer[i].sets} </p> 
-    </div>
-
-     <button id="backbutton" class = "motionsknap tilbagepil" > <img src = "img/tilbagepil.svg" alt = "" > </button> 
-     <button id="forwardbutton" class = "motionsknap frempil" > <img src = "img/pilfrem.svg" alt = "" > </button>
-
-     <!--https: //codepen.io/cassidoo/pen/wEXQaG -->
-     <div class = "container" >
-        <div class = "progress" >
-            <div class = "percent" > 
-        </div> 
-    </div> 
-        <div class = "steps">
-        <div class = "step" id = "0" > 
-    </div> 
-        <div class = "step" id = "1" >  
-    </div> 
-        <div class = "step" id = "2" > 
-    </div> 
-        <div class = "step" id = "3" > 
-    </div> 
-    </div> 
-    </div>
-
-     </section>     
-`
-
-};
-/*console.log(HTMLtemplate);
-document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate */
+*/

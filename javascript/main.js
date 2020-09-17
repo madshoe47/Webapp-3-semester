@@ -28,7 +28,7 @@ function loadPrograms(part) {
 }
 
 
-
+//Mads//
 function getPrograms(part) {
     var title = ""
 
@@ -61,6 +61,8 @@ function getPrograms(part) {
 
 
 };
+
+//Jonathan//
 let current = window.location.hash.replace(/#/g, '')
 let title = getPrograms(current)
 
@@ -218,9 +220,26 @@ function appendExercises(programs) {
 
     };
     console.log(HTMLtemplate);
-    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap">Start</button>`
+    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu()">Start</button>`
 
 }
 
+function hideMenu() {
+    let menu = document.querySelector('#menuvis');
+    let startknap = document.querySelector('.startKnap');
 
+    if (startknap.clicked = true) {
+        menu.style.display = 'none'
+    }
+}
 
+function showMenu() {
+    let menu = document.querySelector('#menuvis');
+    let closesign = document.querySelector('.close-sign');
+    console.log(menu)
+
+    if (closesign.clicked = true) {
+        menu.style.display = 'block'
+    }
+
+}
