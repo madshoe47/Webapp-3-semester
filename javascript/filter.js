@@ -23,6 +23,12 @@ function locaKnap(loc) {
     }
 
     console.log(loca)
+
+    let knapimg = document.querySelector('.homeblue')
+knapimg.style.display= 'block'
+
+let ogknapimg = document.querySelector ('.homeknap')
+ogknapimg.style.display = 'none'
 }
 
 function purposeKnap(pur) {

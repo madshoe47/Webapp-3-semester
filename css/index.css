@@ -570,3 +570,11 @@ nav {
   z-index: 1;
   transition: width 1s;
 }
+
+.homeblue {
+  display: block;
+}
+
+.homeknap {
+  margin: auto;
+}
