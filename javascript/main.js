@@ -215,6 +215,6 @@ function appendExercises(programs) {
 
     };
     console.log(HTMLtemplate);
-    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate
+    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap">Start</button>`
 
 }
