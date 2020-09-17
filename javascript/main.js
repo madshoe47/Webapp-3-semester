@@ -174,7 +174,7 @@ function getExer(program) {
 };
 let recent = window.location.hash.replace(/#/g, '')
 let titleProgram = getExer(recent)
-console.log()
+console.log(Pegasus)
 
 
 // Jonathan //
@@ -220,7 +220,7 @@ function appendExercises(programs) {
 
     };
     console.log(HTMLtemplate);
-    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu()">Start</button>`
+    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu();getExercises('${programTitle}')">Start</button>`
 
 }
 // Mads //

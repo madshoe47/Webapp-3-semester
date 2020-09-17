@@ -13,13 +13,15 @@ function loadExercises(programchosen) {
         });
         appendSingleExercises(exercises);
         navigateTo('exercise');
-        console.log(singleExer)
+
     });
 }
 
 
 function getExercises(programchosen) {
+    programchosen.toLowerCase()
     var choosenProgram = ""
+    console.log(programchosen)
 
     if (programchosen == "Pegasus") {
         loadExercises(Pegasus)
@@ -49,12 +51,15 @@ function getExercises(programchosen) {
         loadExercises(Gemma)
         choosenProgram = "Gemma"
     }
+    console.log(choosenProgram)
     return choosenProgram
 
+
 };
-let choosen = window.location.hash.replace(/#/g, '')
-let choosenProgram = getExercises(choosen)
-console.log()
+let choosen = programTitle
+console.log(choosen)
+
+console.log("Pegasus")
 
 
 function appendSingleExercises(exercises) {
