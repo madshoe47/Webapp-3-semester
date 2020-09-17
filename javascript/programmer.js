@@ -1,6 +1,6 @@
 'use strict'
 
-
+//Mads//
 function loadExercises(programchosen) {
     console.log(programchosen)
     programchosen.onSnapshot(function (snapshotData) {
@@ -17,7 +17,7 @@ function loadExercises(programchosen) {
     });
 }
 
-//Mads//
+
 function getExercises(programchosen) {
     var choosenProgram = ""
 
