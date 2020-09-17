@@ -73,7 +73,7 @@ function appendPrograms(programs, part) {
         console.log(program)
         HTMLtemplate += /*html*/ `
 
-       <a onclick="loadExer('${program.title}')" href="#ovleser" class="pro">
+       <a onclick="getExer('${program.title}')" href="#ovleser" class="pro">
 
         <button class="noback_border" onClick="reply('${program.title}')">
              
@@ -101,7 +101,7 @@ function appendPrograms(programs, part) {
         
         `
     }
-    document.querySelector(`#${part}`).innerHTML = `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
+    document.querySelector(`#${part}`).innerHTML = `<button onClick="filterside(${part})" class="noback_border filter"><img src="img/filter.svg" alt=""></button>` + `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
 
 }
 
@@ -139,7 +139,7 @@ function getExer(program) {
         loadExer(Pegasus)
         titleProgram = "Pegasus"
     } else if (program == "Gemini") {
-        lloadExer(Gemini)
+        loadExer(Gemini)
         titleProgram = "Gemini"
     } else if (program == "Hercules") {
         loadExer(Hercules)
@@ -172,7 +172,7 @@ let titleProgram = getExer(recent)
 
 // Jonathan //
 function appendExercises(programs) {
-    let HTMLtemplate = `<h1 class="overskrift"></h1>`;
+    let HTMLtemplate = "";
     for (const ovelse of programs) {
         console.log(ovelse)
 
@@ -213,6 +213,6 @@ function appendExercises(programs) {
 
     };
     console.log(HTMLtemplate);
-    document.querySelector("#ovelser").innerHTML += HTMLtemplate
+    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate
 
 }
