@@ -68,7 +68,7 @@ function goToPart(name) {
 }
 
 function appendPrograms(programs, part) {
-    let HTMLtemplate = `<h1 class="overskrift">${title}</h1>`;
+    let HTMLtemplate = "";
     for (const program of programs) {
         console.log(program)
         HTMLtemplate += /*html*/ `
@@ -101,7 +101,7 @@ function appendPrograms(programs, part) {
         
         `
     }
-    document.querySelector(`#${part}`).innerHTML += HTMLtemplate
+    document.querySelector(`#${part}`).innerHTML = `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
 
 }
 
@@ -112,14 +112,12 @@ function reply(clicked_title) {
 
 
 
-console.log(programTitle)
-
 //øvelserne
 
 // Maja //
-function loadExer(part) {
-    console.log(part)
-    pegasus.onSnapshot(function (snapshotData) {
+function loadExer(program) {
+    console.log(program)
+    program.onSnapshot(function (snapshotData) {
         let ovelser = [];
         snapshotData.forEach(function (doc) {
             let ovelse = doc.data();
@@ -128,8 +126,13 @@ function loadExer(part) {
         });
         console.log(ovelser)
         appendExercises(ovelser)
+        navigateTo('ovelser')
 
     });
+
+}
+
+function getExer() {
 
 }
 
@@ -139,8 +142,8 @@ function appendExercises(programs) {
     let HTMLtemplate = `<h1 class="overskrift"></h1>`;
     for (const ovelse of programs) {
         console.log(ovelse)
-        
-        HTMLtemplate += 
+
+        HTMLtemplate +=
         /*html*/ `
 
        <a href="#ovleser" class="pro">
@@ -168,15 +171,16 @@ function appendExercises(programs) {
             </div>
 
 
-            <hr class="marginnul">
+            <hr >
         </article>
     </button>
  </a>   
 `
-        
+
     };
     console.log(HTMLtemplate);
-    document.querySelector("#ovelser").innerHTML+=HTMLtemplate
+    document.querySelector("#ovelser").innerHTML += HTMLtemplate
+
 }
 
 

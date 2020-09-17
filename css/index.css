@@ -575,6 +575,51 @@ nav {
   display: block;
 }
 
-.homeknap {
-  margin: auto;
+
+.exer{
+  display: flex;
+  width: 90%;
+  margin:auto;
+  align-items: flex-end;
+  justify-content: space-between;
+
+
 }
+
+.exercise{
+width: 90%;
+margin: auto;
+}
+
+.reps{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.reps img{
+  padding: 0 8px;
+  width: 15px;
+}
+
+.headrep{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.headrep h1{
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+
+.exerbrep{
+  display: flex;
+
+}
+
+.exerbrep img{
+  margin-right: 10px;
+}
+
