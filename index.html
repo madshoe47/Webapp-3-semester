@@ -204,6 +204,40 @@
     <!---->
 
 
+    <section id="exercise" class="page">
+        <button onclick="location.href=''" class="close-sign"><img src="img/closex.svg" alt=""></button>
+
+        <div class="stopwatch">
+            00:00
+        </div>
+
+        <div id="gifonexercise" class="picture-exercise">
+            <img src="img/situps.gif" alt="">
+            <h1 id="overskriftexercise">Side Plank</h1>
+            <p class="sets">8 reps x 4 sets</p>
+        </div>
+
+        <button onclick="location.href=''" class="tilbagepil"><img src="img/tilbagepil.svg" alt=""></button>
+        <button onclick="location.href=''" class="frempil"><img src="img/pilfrem.svg" alt=""></button>
+
+        <!-- https://codepen.io/cassidoo/pen/wEXQaG -->
+        <div class="container">
+            <div class="progress">
+                <div class="percent"></div>
+            </div>
+            <div class="steps">
+                <div class="step" id="0"></div>
+                <div class="step" id="1"></div>
+                <div class="step" id="2"></div>
+                <div class="step" id="3"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -218,6 +252,7 @@
     <script src="javascript/spa-service.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/filter.js"></script>
+    <script src="javascript/progress-bar-exercises.js"></script>
 </body>
 
 </html>
