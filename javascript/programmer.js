@@ -2,8 +2,8 @@
 
 function loadSingleExer(ovelse) {
     console.log(ovelse)
+    let singleExer = [];
     ovelse.onSnapshot(function (snapshotData) {
-        let singleExer = [];
         snapshotData.forEach(function (doc) {
             let exer = doc.data();
             exer.id = doc.id;
@@ -15,11 +15,28 @@ function loadSingleExer(ovelse) {
     });
 
 }
-let index = [0]
-
-loadSingleExer(Gemini)
 
 
+let index = 0
+
+
+function resultOfIndex(singleExer) {
+    return singleExer[index]
+}
+
+function motionsHandler() {
+    const backbutton = document.getElementById('backbutton')
+    const forwardbutton = document.getElementById('forwardbutton')
+
+    if (forwardbutton.clicked == true) {
+        index++
+    }
+    if (backbutton.clicked == true) {
+        index--
+    }
+
+    console.log(buttons);
+}
 
 
 
@@ -38,8 +55,8 @@ function appendSingleExercises(programs) {
         <p class = "sets" > ${singleExer[i].sets} </p> 
     </div>
 
-     <button onclick = "index++" class = "tilbagepil" > <img src = "img/tilbagepil.svg" alt = "" > </button> 
-     <button onclick = "index--" class = "frempil" > <img src = "img/pilfrem.svg" alt = "" > </button>
+     <button id="backbutton" class = "motionsknap tilbagepil" > <img src = "img/tilbagepil.svg" alt = "" > </button> 
+     <button id="forwardbutton" class = "motionsknap frempil" > <img src = "img/pilfrem.svg" alt = "" > </button>
 
      <!--https: //codepen.io/cassidoo/pen/wEXQaG -->
      <div class = "container" >
@@ -63,5 +80,5 @@ function appendSingleExercises(programs) {
 `
 
 };
-console.log(HTMLtemplate);
-document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate
+/*console.log(HTMLtemplate);
+document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate */
