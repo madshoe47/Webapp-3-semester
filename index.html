@@ -100,10 +100,12 @@
         <div class="filterbox">
             <h1>Duration</h1>
             <div class="slidecontainer">
-                <input type="range" min="5" max="60" value="32.5" class="slider" id="minSlider">
+                <input onchange="valFunk(this.value)" type="range" min="5" max="60" value="60" class="slider"
+                    id="minSlider">
             </div>
             <div class="tidslide">
                 <p class="marginnul">5 min</p>
+                <p id="slival"></p>
                 <p class="marginnul">60 min</p>
             </div>
 
@@ -213,7 +215,7 @@
     <section id="complete" class="page">
         <div class="like"><button class="noback_border" onClick="location.href='#liked'"><img src="img/gem.svg"
                     alt="likeknap">
-                <p>Save Program</p>
+                <p class="save">Save Program</p>
             </button>
 
         </div>

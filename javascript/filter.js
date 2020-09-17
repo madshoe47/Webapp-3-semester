@@ -10,8 +10,13 @@ let loca = ""
 
 function filterside(side) {
     list = side
+    console.log(list)
     navigateTo("filter")
-    console.log(side)
+}
+
+function valFunk(value) {
+    document.querySelector("#slival").innerHTML = value + " Minutter"
+
 }
 
 function locaKnap(loc) {
@@ -25,10 +30,10 @@ function locaKnap(loc) {
     console.log(loca)
 
     let knapimg = document.querySelector('.homeblue')
-knapimg.style.display= 'block'
+    knapimg.style.display = 'block'
 
-let ogknapimg = document.querySelector ('.homeknap')
-ogknapimg.style.display = 'none'
+    let ogknapimg = document.querySelector('.homeknap')
+    ogknapimg.style.display = 'none'
 }
 
 function purposeKnap(pur) {
@@ -53,11 +58,8 @@ function nulstil() {
 
 
 function updateFilter() {
-    let sliderval = document.querySelector('#minSlider').value;
-    minut = sliderval;
-
-
-    navigateTo(`'${list}'`)
+    console.log(document.querySelector('#minSlider').value)
+    goToPart(`${list}`)
 
 
 }

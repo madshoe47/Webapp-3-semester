@@ -9,7 +9,9 @@ let programTitle = ""
 // ========== READ ==========
 // watch the database ref for changes
 function loadPrograms(part) {
-    part.onSnapshot(function (snapshotData) {
+    let slidervalu = document.querySelector('#minSlider').value
+    let time = Number(slidervalu)
+    part.where("time", "<", time).onSnapshot(function (snapshotData) {
         let programmer = [];
         snapshotData.forEach(function (doc) {
             let program = doc.data();
@@ -17,13 +19,15 @@ function loadPrograms(part) {
             programmer.push(program);
         });
         console.log(programmer)
+
         appendPrograms(programmer, current)
-
-
 
     });
 
+
 }
+
+
 
 function getPrograms(part) {
     var title = ""
@@ -101,7 +105,7 @@ function appendPrograms(programs, part) {
         
         `
     }
-    document.querySelector(`#${part}`).innerHTML = `<button onClick="filterside(${part})" class="noback_border filter"><img src="img/filter.svg" alt=""></button>` + `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
+    document.querySelector(`#${part}`).innerHTML = `<button onClick="filterside('${part}')" class="noback_border filter"><img src="img/filter.svg" alt=""></button>` + `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
 
 }
 
@@ -109,7 +113,6 @@ function reply(clicked_title) {
     programTitle = clicked_title
     console.log(programTitle)
 }
-
 
 
 //øvelserne
@@ -218,3 +221,6 @@ function appendExercises(programs) {
     document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap">Start</button>`
 
 }
+
+
+
