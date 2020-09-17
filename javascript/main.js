@@ -132,9 +132,42 @@ function loadExer(program) {
 
 }
 
-function getExer() {
+function getExer(program) {
+    var titleProgram = ""
 
-}
+    if (program == "Pegasus") {
+        loadExer(Pegasus)
+        titleProgram = "Pegasus"
+    } else if (program == "Gemini") {
+        lloadExer(Gemini)
+        titleProgram = "Gemini"
+    } else if (program == "Hercules") {
+        loadExer(Hercules)
+        titleProgram = "Hercules"
+    } else if (program == "back") {
+        loadExer(back)
+        titleProgram = "Back"
+    } else if (program == "Fornax") {
+        loadExer(Fornax)
+        titleProgram = "Fornax"
+    } else if (program == "Caroli") {
+        loadExer(Caroli)
+        titleProgram = "Cor Caroli"
+    } else if (program == "Mensa") {
+        loadExer(Mensa)
+        titleProgram = "Mensa"
+    } else if (program == "Delphinus") {
+        loadExer(Delphinus)
+        titleProgram = "Delphinus"
+    } else if (program == "Gemma") {
+        loadExer(Gemma)
+        titleProgram = "Gemma"
+    }
+    return titleProgram
+
+};
+let recent = window.location.hash.replace(/#/g, '')
+let titleProgram = getExer(recent)
 
 
 // Jonathan //
@@ -144,7 +177,8 @@ function appendExercises(programs) {
         console.log(ovelse)
 
         HTMLtemplate +=
-        /*html*/ `
+            /*html*/
+            `
 
        <a href="#ovleser" class="pro">
 
@@ -182,5 +216,3 @@ function appendExercises(programs) {
     document.querySelector("#ovelser").innerHTML += HTMLtemplate
 
 }
-
-
