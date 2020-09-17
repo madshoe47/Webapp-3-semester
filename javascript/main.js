@@ -148,13 +148,11 @@ function appendExercises(programs) {
         <article class="exercise">
             <div class="exer">
                 <div class="exerbrep">
-                    <img class="proIMG" src="${ovelse.img}" alt="">
+                    <img class="proIMG" src="${ovelse.gif}" alt="">
                     <div class="headrep">
-                        <h1 class="marginnul">${ovelse.description}</h1>
+                        <h1 class="marginnul">${ovelse.title}</h1>
                         <div class="reps">
-                            <h4 class="marginnul">${ovelse.rep} reps</h4>
-                            <img src="img/close.svg" alt="">
-                            <h4 class="marginnul">${ovelse.sets} sets</h4>
+                            <h4 class="marginnul">${ovelse.sets}</h4>
                         </div>
 
 
@@ -173,12 +171,12 @@ function appendExercises(programs) {
             <hr class="marginnul">
         </article>
     </button>
- </a>
- console.log(HTMLtemplate)
+ </a>   
+`
         
-        `
-    }
-    document.querySelector('#ovelser').innerHTML += HTMLtemplate
+    };
+    console.log(HTMLtemplate);
+    document.querySelector("#ovelser").innerHTML+=HTMLtemplate
 }
 
 
