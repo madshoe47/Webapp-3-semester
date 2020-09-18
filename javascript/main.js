@@ -204,7 +204,7 @@ function appendExercises(programs) {
 
                 </div>
 
-                <div><img src="img/skraldespand.svg" alt="">
+                <div class="slet"><img src="img/skraldespand.svg" alt="">
                     <p class="marginnul">Delete</p>
                 </div>
 
