@@ -220,7 +220,7 @@ function appendExercises(programs) {
 
     };
     console.log(HTMLtemplate);
-    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu();getExercises('${programTitle}')">Start</button>`
+    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<div class="knapknap"><button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu();getExercises('${programTitle}')">Start</button></div>`
 
 }
 // Mads //
