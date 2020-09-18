@@ -4,6 +4,7 @@
 
 
 let programTitle = ""
+let valgteProgramer = []
 
 // Jonathan //
 // ========== READ ==========
@@ -73,16 +74,23 @@ function goToPart(name) {
     navigateTo(name)
 }
 
+function vaelgProgram(template) {
+    console.log(template)
+    valgteProgram = template
+
+}
+
 function appendPrograms(programs, part) {
     let HTMLtemplate = "";
+    let programmer = [];
     for (const program of programs) {
         console.log(program)
-        HTMLtemplate += /*html*/ `
+        let template = ""
+        template =
+        /*html*/ `
 
-       <a onclick="getExer('${program.title}')" href="#ovleser" class="pro">
-
+       <a onclick="getExer('${program.title}');vaelgProgram()" href="#ovleser" class="pro">
         <button class="noback_border" onClick="reply('${program.title}')">
-             
             <article class="program">
             <div class="img_t_l">
                 <img class="proIMG" src="${program.img}" alt="">
@@ -104,12 +112,24 @@ function appendPrograms(programs, part) {
             
     </button>
  </a>
-        
         `
+        console.log(template)
+        valgteProgramer.push(template)
+
+        HTMLtemplate += template
     }
     document.querySelector(`#${part}`).innerHTML = `<button onClick="filterside('${part}')" class="noback_border filter"><img src="img/filter.svg" alt=""></button>` + `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
+    console.log(valgteProgramer)
+    //console.log(programmer)
+    //JSON.stringify(programmer)
+    //sessionStorage.setItem("programmer", programmer)
 
 }
+
+
+
+
+
 
 function reply(clicked_title) {
     programTitle = clicked_title
@@ -216,7 +236,6 @@ function appendExercises(programs) {
 `
 
     };
-    console.log(HTMLtemplate);
     document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<div class="knapknap"><button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu();getExercises('${programTitle}')">Start</button></div>`
 
 }
