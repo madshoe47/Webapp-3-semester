@@ -184,10 +184,7 @@ function appendExercises(programs) {
         console.log(ovelse)
 
         HTMLtemplate +=
-            /*html*/
-            `
-
-       <a href="#ovleser" class="pro">
+            /*html*/`       <a href="#ovleser" class="pro">
 
         <article class="exercise">
             <div class="exer">
@@ -204,7 +201,7 @@ function appendExercises(programs) {
 
                 </div>
 
-                <div><img src="img/skraldespand.svg" alt="">
+                <div class="slet"><img src="img/skraldespand.svg" alt="">
                     <p class="marginnul">Delete</p>
                 </div>
 

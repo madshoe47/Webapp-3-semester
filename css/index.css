@@ -280,13 +280,13 @@ padding: 3%;
 
 .bigbutton {
   border: none;
-  max-width: 40%;
+  max-width: 45%;
   background-color: #20639B;
   color: white;
-  padding: 15px 32px;
+  padding: 1px 24px;
   text-align: center;
   text-decoration: none;
-  font-size: 4vw;
+  font-size: 4.5vw;
   margin: auto;
   cursor: pointer;
   border-radius: 50px;
@@ -294,6 +294,7 @@ padding: 3%;
   box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.51);
   margin: 0 0.5em;
   height: 70px;
+  font-weight: 700;;
 
 }
 
@@ -632,6 +633,11 @@ margin: auto;
 .exerbrep img{
   margin-right: 10px;
 }
+
+.reps h4, .slet p{
+  color: #20639B;
+}
+
 
 /* START TRÆNING KNAP */
 .startKnap {
