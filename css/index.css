@@ -449,8 +449,6 @@ padding: 3%;
   color: #20639B;
 }
 
-
-
 #gifonexercise {
   width: 100%;
   padding-top: 6em;
@@ -583,9 +581,8 @@ padding: 3%;
 }
 
 .homeblue {
-  display: block;
+  display: none;
 }
-
 
 .exer{
   display: flex;
@@ -593,8 +590,6 @@ padding: 3%;
   margin:auto;
   align-items: flex-end;
   justify-content: space-between;
-
-
 }
 
 .exercise{
@@ -681,3 +676,13 @@ padding-top: 5%;
 border-radius: 20%;
 }
 
+#fullheart {
+display: none;
+}
+
+
+.overskrift4{
+  width: 80%;
+  margin: auto;
+  color: #20639B
+}

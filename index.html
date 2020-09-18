@@ -115,14 +115,14 @@
         <div class="filterbox">
             <h1>Workout location:</h1>
             <div class="flex_filt">
-                <button onclick="locaKnap('home')" class="bigbutton filterknap trykket">
-                    <div class=" loc">Home<img class="homeknap" src="img/home_loc.svg" alt="">
-                        <img class="homeblue" src="img/homeblue.svg" alt="">
+                <button id="hom"  onclick="locaKnap('home')" class="bigbutton filterknap trykket">
+                    <div class=" loc">Home<img id="homeknap" class="homeknap" src="img/home_loc.svg" alt="">
+                        <img id="homeblue" class="homeblue" src="img/homeblue.svg" alt="">
 
                     </div>
                 </button>
 
-                <button onclick="locaKnap('Fitness')" class="bigbutton filterknap trykket">
+                <button id="fit" onclick="locaKnap('Fitness')" class="bigbutton filterknap trykket">
                     <div class="loc">Fitness <img class="homeknap" src="img/fit_loc.svg" alt="">
                         <img class="homeblue" src="img/fitnessblue.svg" alt="">
                     </div>
@@ -230,7 +230,7 @@
     <!--Program completed site-->
 
     <section id="complete" class="page">
-        <div class="like"><button class="noback_border" onClick="likeKnap()"><img src="img/gem.svg" alt="likeknap">
+        <div class="like"><button class="noback_border" onClick="likeKnap()"><img id="fullheart" src="img/fullheart.svg"><img id="tomthjerte" src="img/gem.svg" alt="likeknap">
                 <p class="save">Save Program</p>
             </button>
 
@@ -250,8 +250,9 @@
     <!-- jonathan-->
     <!-- liked side-->
     <section id="liked" class="page">
-
-
+<h1 class="overskrift2">Liked Programs</h1> 
+<div class="overskrift4"><h4>Here you will find your favourite programs and the will wait for you till your next traning pass. </h4>
+</div>
     </section>
 
 

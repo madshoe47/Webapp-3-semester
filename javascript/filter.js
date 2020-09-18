@@ -29,11 +29,27 @@ function locaKnap(loc) {
 
     console.log(loca)
 
+   
+}
+
+if(document.querySelector("#home").clicked==true){
+
+    let knapimg = document.querySelector('#homeblue')
+    knapimg.style.display = "block"
+
+    let ogknapimg = document.querySelector('#homeknap')
+    ogknapimg.style.display = "none"
+
+}
+
+
+
+function locaKnapFarve(){
     let knapimg = document.querySelector('.homeblue')
-    knapimg.style.display = 'block'
+    knapimg.style.display = "block"
 
     let ogknapimg = document.querySelector('.homeknap')
-    ogknapimg.style.display = 'none'
+    ogknapimg.style.display = "none"
 }
 
 function purposeKnap(pur) {
