@@ -84,9 +84,6 @@ function appendSingleExercises(exercises) {
 /*console.log(HTMLtemplate);
 document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate */
 
-
-
-
 /*
 let index = 0
 

@@ -28,13 +28,9 @@ function pageChange() {
     page = location.hash.slice(1);
   }
   showPage(page);
-
 }
 
-
-
-
-// navknap
+// jonathan - navknap
 function menuknapvis() {
   let nav = document.querySelector('nav');
   nav.classList.add("show")
@@ -47,7 +43,4 @@ function menuKnapGem() {
 
 
 }
-
-
-
 pageChange(); // called by default when the app is loaded for the first time

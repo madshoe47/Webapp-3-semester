@@ -1,8 +1,5 @@
 "use strict"
 
-
-
-
 let programTitle = ""
 let valgteProgramer = []
 
@@ -24,10 +21,7 @@ function loadPrograms(part) {
         appendPrograms(programmer, current)
 
     });
-
-
 }
-
 
 //Mads//
 function getPrograms(part) {
@@ -107,8 +101,6 @@ function appendPrograms(programs, part) {
                 <p class="description">${program.description}</p>
             </div>
         </article>
-    
-   
             
     </button>
  </a>
@@ -125,11 +117,6 @@ function appendPrograms(programs, part) {
     //sessionStorage.setItem("programmer", programmer)
 
 }
-
-
-
-
-
 
 function reply(clicked_title) {
     programTitle = clicked_title

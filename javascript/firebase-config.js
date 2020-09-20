@@ -13,7 +13,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-
+// Jonathan //
 const _db = firebase.firestore();
 const abs = _db.collection("Abs");
 const legs = _db.collection("Legs");
@@ -23,6 +23,8 @@ const booty = _db.collection("Booty");
 const cardio = _db.collection("Cardio");
 const chest = _db.collection("Chest");
 const yoga = _db.collection("Yoga");
+
+//maja//
 const Pegasus = _db.collection("Abs").doc("Pegasus").collection("Excersises")
 const Gemini = _db.collection("Arms & Shoulder").doc("Gemini").collection("Excersises")
 const Hercules = _db.collection("Back").doc("Hercules").collection("Excersises")

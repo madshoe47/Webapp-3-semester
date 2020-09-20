@@ -5,9 +5,6 @@ let minut = ""
 let purpose = ""
 let loca = ""
 
-
-
-
 function filterside(side) {
     list = side
     console.log(list)
