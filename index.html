@@ -11,6 +11,7 @@
     <title></title>
 </head>
 <!--Jonathan-->
+
 <body onhashchange="pageChange()">
     <header>
         <a href="#home"><img src="img/logo.png" alt="logo" class="logo"></a>
@@ -87,7 +88,7 @@
 
     </section>
 
-<!---Jonathan-->
+    <!---Jonathan-->
     <section id="filter" class="page">
         <button onclick="nulstil()" class="noback_border nulstil
             ">
@@ -111,7 +112,7 @@
         <div class="filterbox">
             <h1>Workout location:</h1>
             <div class="flex_filt">
-                <button id="hom"  onclick="locaKnap('home')" class="bigbutton filterknap trykket">
+                <button id="hom" onclick="locaKnap('home')" class="bigbutton filterknap trykket">
                     <div class=" loc">Home<img id="homeknap" class="homeknap" src="img/home_loc.svg" alt="">
                         <img id="homeblue" class="homeblue" src="img/homeblue.svg" alt="">
 
@@ -209,20 +210,34 @@
     <section id="exercise" class="page">
         <button class="close-sign" onClick="location.href='#allprograms'; showMenu()"> <img src="img/closex.svg" alt="">
         </button>
-
-        <div id="gifonexercise" class="picture-exercise sliderExercises">
+        <!-- Wrapper -->
+        <div id="gifonexercise" class="slider-wrapper">
+            <div class="slideContainer"></div>
 
         </div>
+        <!--
+        <div class="navigationDotsSlider">
+            <div id="singleDot1" class="singleDots active"></div>
+            <div id="singleDot2" class="singleDots"></div>
+            <div id="singleDot3" class="singleDots"></div>
+            <div id="singleDot4" class="singleDots"></div>
+            <div id="singleDot5" class="singleDots"></div>
+            <div id="singleDot6" class="singleDots"></div>
 
-        <button id="backbutton" class="motionsknap tilbagepil"> <img src="img/tilbagepil.svg" alt=""> </button>
-        <button id="forwardbutton" class="motionsknap frempil"> <img src="img/pilfrem.svg" alt=""> </button>
+        </div>
+-->
+        <button id="backbutton" class="motionsknap tilbagepil"> <img src="img/tilbagepil.svg" alt="">
+        </button>
+        <button id="forwardbutton" class="motionsknap frempil"> <img src="img/pilfrem.svg" alt="">
+        </button>
     </section>
 
     <!--Maja-->
     <!--Program completed site-->
 
     <section id="complete" class="page">
-        <div class="like"><button class="noback_border" onClick="likeKnap()"><img id="fullheart" src="img/fullheart.svg"><img id="tomthjerte" src="img/gem.svg" alt="likeknap">
+        <div class="like"><button class="noback_border" onClick="likeKnap()"><img id="fullheart"
+                    src="img/fullheart.svg"><img id="tomthjerte" src="img/gem.svg" alt="likeknap">
                 <p class="save">Save Program</p>
             </button>
 
@@ -241,9 +256,10 @@
     <!-- jonathan-->
     <!-- liked side-->
     <section id="liked" class="page">
-<h1 class="overskrift2">Liked Programs</h1> 
-<div class="overskrift4"><h4>Here your can find your favourite programs, which will be saved for your next traning pass. </h4>
-</div>
+        <h1 class="overskrift2">Liked Programs</h1>
+        <div class="overskrift4">
+            <h4>Here your can find your favourite programs, which will be saved for your next traning pass. </h4>
+        </div>
     </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->

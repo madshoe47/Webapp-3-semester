@@ -69,41 +69,53 @@ function appendSingleExercises(exercises) {
         console.log(exercise.sets)
         HTMLtemplate += /*html*/ `
 
-<div class="slide">
-    <div class="caption">
+        <!-- Slide image --> 
+    <div class="sliderDiv">
         <img src = "${exercise.gif}" alt = "">
         <h1 id = "overskriftexercise" > ${exercise.title} </h1> 
         <p class = "sets" > ${exercise.sets} </p> 
     </div>
-</div>
+
 `
     }
-    document.querySelector('#gifonexercise').innerHTML = HTMLtemplate;
+    document.querySelector('.slideContainer').innerHTML = HTMLtemplate;
     console.log(HTMLtemplate)
 };
-/*console.log(HTMLtemplate);
-document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate */
-
-/*
-let index = 0
 
 
-function resultOfIndex(singleExer) {
-    return singleExer[index]
+
+const slide = document.querySelector(".slideContainer");
+
+function update() {
+    var result = slide.style.transform = "translateX(-" + (100 * count) + "%)";
+    console.log(slide.style.transform)
+    console.log(result)
+
 }
 
-function motionsHandler() {
-    const backbutton = document.getElementById('backbutton')
-    const forwardbutton = document.getElementById('forwardbutton')
+let count = 0;
+let forwardButton = document.getElementById("forwardbutton");
+let backButton = document.getElementById("backbutton");
 
-    if (forwardbutton.clicked == true) {
-        index++
-    }
-    if (backbutton.clicked == true) {
-        index--
-    }
 
-    console.log(buttons);
+forwardButton.onclick = function () {
+    count++;
+    console.log(count)
+    update()
+
+    if (count > 5) {
+        location.href = '#complete'
+        showMenu()
+    }
+};
+
+backButton.onclick = function () {
+    count--;
+    console.log(count)
+    update()
+
+    if (count < 0) {
+        location.href = '#allprograms'
+        showMenu()
+    };
 }
-
-*/
