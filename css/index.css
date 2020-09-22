@@ -481,28 +481,6 @@ nav {
   width: 50%;
 }
 
-/*
-.navigationDotsSlider {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 4em;
-  width: 100%;
-}
-
-.singleDots {
-  border: 1px solid #121212;
-  border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  display: block;
-  margin: 5px;
-}
-
-.singleDots.active {
-  background-color: #20639B;
-}*/
-
 .sets {
   font-size: 1em;
   text-align: center;
@@ -510,8 +488,6 @@ nav {
   margin-top: 0.5em;
   color: #20639B;
 }
-
-
 
 .close-sign,
 .tilbagepil,
