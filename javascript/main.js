@@ -68,22 +68,16 @@ function goToPart(name) {
     navigateTo(name)
 }
 
-function vaelgProgram(template) {
-    console.log(template)
-    valgteProgram = template
-
-}
 
 function appendPrograms(programs, part) {
     let HTMLtemplate = "";
     let programmer = [];
     for (const program of programs) {
-        console.log(program)
         let template = ""
         template =
         /*html*/ `
 
-       <a onclick="getExer('${program.title}');vaelgProgram()" href="#ovleser" class="pro">
+       <a onclick="getExer('${program.title}')" href="#ovleser" class="pro">
         <button class="noback_border" onClick="reply('${program.title}')">
             <article class="program">
             <div class="img_t_l">
@@ -105,16 +99,12 @@ function appendPrograms(programs, part) {
     </button>
  </a>
         `
-        console.log(template)
         valgteProgramer.push(template)
 
         HTMLtemplate += template
     }
     document.querySelector(`#${part}`).innerHTML = `<button onClick="filterside('${part}')" class="noback_border filter"><img src="img/filter.svg" alt=""></button>` + `<h1 class="overskrift">${title}</h1>` + HTMLtemplate
-    console.log(valgteProgramer)
-    //console.log(programmer)
-    //JSON.stringify(programmer)
-    //sessionStorage.setItem("programmer", programmer)
+
 
 }
 
@@ -128,7 +118,7 @@ function reply(clicked_title) {
 
 // Maja //
 function loadExer(program) {
-    console.log(program)
+
     program.onSnapshot(function (snapshotData) {
         let ovelser = [];
         snapshotData.forEach(function (doc) {
@@ -136,7 +126,7 @@ function loadExer(program) {
             ovelse.id = doc.id;
             ovelser.push(ovelse);
         });
-        console.log(ovelser)
+
         appendExercises(ovelser)
         navigateTo('ovelser')
 
@@ -181,14 +171,13 @@ function getExer(program) {
 };
 let recent = window.location.hash.replace(/#/g, '')
 let titleProgram = getExer(recent)
-console.log(Pegasus)
 
 
 // Jonathan //
 function appendExercises(programs) {
     let HTMLtemplate = "";
     for (const ovelse of programs) {
-        console.log(ovelse)
+
 
         HTMLtemplate +=
             /*html*/`       <a href="#ovleser" class="pro">

@@ -2,7 +2,7 @@
 
 //Mads//
 function loadExercises(programchosen) {
-    console.log(programchosen)
+
     programchosen.onSnapshot(function (snapshotData) {
         let exercises = [];
         snapshotData.forEach(function (doc) {
@@ -21,7 +21,7 @@ function loadExercises(programchosen) {
 function getExercises(programchosen) {
     programchosen.toLowerCase()
     var choosenProgram = ""
-    console.log(programchosen)
+
 
     if (programchosen == "Pegasus") {
         loadExercises(Pegasus)
@@ -51,22 +51,19 @@ function getExercises(programchosen) {
         loadExercises(Gemma)
         choosenProgram = "Gemma"
     }
-    console.log(choosenProgram)
+
     return choosenProgram
 
 
 };
 let choosen = programTitle
-console.log(choosen)
 
-console.log("Pegasus")
+
 
 
 function appendSingleExercises(exercises) {
     let HTMLtemplate = "";
     for (let exercise of exercises) {
-        console.log(exercise.title)
-        console.log(exercise.sets)
         HTMLtemplate += /*html*/ `
 
         <!-- Slide image --> 
@@ -79,7 +76,6 @@ function appendSingleExercises(exercises) {
 `
     }
     document.querySelector('.slideContainer').innerHTML = HTMLtemplate;
-    console.log(HTMLtemplate)
 };
 
 
@@ -88,8 +84,6 @@ const slide = document.querySelector(".slideContainer");
 
 function update() {
     var result = slide.style.transform = "translateX(-" + (100 * count) + "%)";
-    console.log(slide.style.transform)
-    console.log(result)
 
 }
 
@@ -100,7 +94,6 @@ let backButton = document.getElementById("backbutton");
 
 forwardButton.onclick = function () {
     count++;
-    console.log(count)
     update()
 
     if (count > 5) {
@@ -111,7 +104,6 @@ forwardButton.onclick = function () {
 
 backButton.onclick = function () {
     count--;
-    console.log(count)
     update()
 
     if (count < 0) {

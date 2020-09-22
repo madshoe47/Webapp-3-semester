@@ -1,18 +1,16 @@
 "use strict"
 //jonathan //
 function likeKnap() {
-    console.log(valgteProgramer)
     let igang = []
 
     for (const program of valgteProgramer) {
         if (program.includes(programTitle)) {
             igang.push(program)
         }
-        console.log(igang)
     }
     appendFarvorit(igang)
     hearts()
-   
+
 }
 
 
@@ -26,11 +24,11 @@ function appendFarvorit(igang) {
 
 function hearts() {
 
-let tomthjerte = document.querySelector("#tomthjerte")
+    let tomthjerte = document.querySelector("#tomthjerte")
 
-let fullheart = document.querySelector("#fullheart")
+    let fullheart = document.querySelector("#fullheart")
 
-tomthjerte.style.display = "none";
-fullheart.style.display = "inline";
+    tomthjerte.style.display = "none";
+    fullheart.style.display = "inline";
 
 }
