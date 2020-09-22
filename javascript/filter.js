@@ -26,10 +26,10 @@ function locaKnap(loc) {
 
     console.log(loca)
 
-   
+
 }
 
-if(document.querySelector("#home").clicked==true){
+if (document.querySelector("#home").clicked == true) {
 
     let knapimg = document.querySelector('#homeblue')
     knapimg.style.display = "block"
@@ -41,7 +41,7 @@ if(document.querySelector("#home").clicked==true){
 
 
 
-function locaKnapFarve(){
+function locaKnapFarve() {
     let knapimg = document.querySelector('.homeblue')
     knapimg.style.display = "block"
 
@@ -58,6 +58,8 @@ function purposeKnap(pur) {
     }
     console.log(purpose)
 }
+
+
 
 function nulstil() {
     document.querySelector('#minSlider').value = 32.5;
