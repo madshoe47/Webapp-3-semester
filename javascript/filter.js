@@ -12,7 +12,7 @@ function filterside(side) {
 }
 
 function valFunk(value) {
-    document.querySelector("#slival").innerHTML = value + " Minutter"
+    document.querySelector("#slival").innerHTML = value + " Minutes"
 
 }
 
