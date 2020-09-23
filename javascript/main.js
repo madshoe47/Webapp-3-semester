@@ -16,7 +16,7 @@ function loadPrograms(part) {
             program.id = doc.id;
             programmer.push(program);
         });
-        console.log(programmer)
+
 
         appendPrograms(programmer, current)
 
@@ -71,6 +71,8 @@ function goToPart(name) {
 
 function appendPrograms(programs, part) {
     let HTMLtemplate = "";
+    valgteProgramer = []
+
     let programmer = [];
     for (const program of programs) {
         let template = ""
@@ -111,7 +113,7 @@ function appendPrograms(programs, part) {
 
 function reply(clicked_title) {
     programTitle = clicked_title
-    console.log(programTitle)
+
 }
 
 

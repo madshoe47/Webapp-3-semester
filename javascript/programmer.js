@@ -7,7 +7,6 @@ function loadExercises(programchosen) {
         let exercises = [];
         snapshotData.forEach(function (doc) {
             let exercise = doc.data();
-            console.log(exercise)
             exercise.id = doc.id;
             exercises.push(exercise);
         });
