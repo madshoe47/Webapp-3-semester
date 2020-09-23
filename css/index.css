@@ -59,7 +59,7 @@ h1 {
 
 nav {
   background-color: white;
-  position: absolute;
+  position: fixed;
   z-index: 99999999999999;
   bottom: 0;
   width: 100%;
