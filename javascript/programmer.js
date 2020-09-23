@@ -98,6 +98,7 @@ forwardButton.onclick = function () {
 
     if (count > 5) {
         location.href = '#complete'
+        count = 0;
         showMenu()
     }
 };

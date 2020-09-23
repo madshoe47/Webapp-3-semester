@@ -75,7 +75,8 @@ function appendPrograms(programs, part) {
     for (const program of programs) {
         let template = ""
         template =
-        /*html*/ `
+            /*html*/
+            `
 
        <a onclick="getExer('${program.title}')" href="#ovleser" class="pro">
         <button class="noback_border" onClick="reply('${program.title}')">
@@ -180,7 +181,8 @@ function appendExercises(programs) {
 
 
         HTMLtemplate +=
-            /*html*/`       <a href="#ovleser" class="pro">
+            /*html*/
+            `       <a href="#ovleser" class="pro">
 
         <article class="exercise">
             <div class="exer">
@@ -212,7 +214,7 @@ function appendExercises(programs) {
 `
 
     };
-    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<div class="knapknap"><button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu();getExercises('${programTitle}')">Start</button></div>`
+    document.querySelector("#ovelser").innerHTML = `<h1 class="overskrift"></h1>` + HTMLtemplate + `<div class="knapknap"><button class="noback_border bigbutton startKnap" onClick="location.href='#exercise'; hideMenu();getExercises('${programTitle}'); update()">Start</button></div>`
 
 }
 // Mads //
