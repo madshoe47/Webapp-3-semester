@@ -33,12 +33,3 @@ const Caroli = _db.collection("Cardio").doc("Cor Caroli").collection("Excersises
 const Mensa = _db.collection("Chest").doc("Mensa").collection("Excersises")
 const Delphinus = _db.collection("Legs").doc("Delphinus").collection("Excersises")
 const Gemma = _db.collection("Yoga").doc("Gemma").collection("Excersises")
-
-
-
-
-
-
-
-
-
